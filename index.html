@@ -1,37 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume Language Selection</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            text-align: center;
-        }
-        .button {
-            padding: 10px 14px;
-            margin: 05px;
-            text-decoration: none;
-            color: white;
-            background-color: #007BFF;
-            border-radius: 5px;
-            font-size: 13px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Varshitha Ramakumar — Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #F8F7F5;
+      color: #1A1A1A;
+      font-family: 'Inter', sans-serif;
+      padding: 24px;
+    }
+
+    .wrapper {
+      width: 100%;
+      max-width: 520px;
+      text-align: center;
+    }
+
+    .name {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 6vw, 2.75rem);
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+      color: #1A1A1A;
+    }
+
+    .divider {
+      width: 40px;
+      height: 1.5px;
+      background: #4A7C74;
+      margin: 20px auto;
+    }
+
+    .prompt {
+      font-size: 0.95rem;
+      color: #6B6865;
+      letter-spacing: 0.01em;
+      margin-bottom: 36px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 28px 20px;
+      background: #fff;
+      border: 1.5px solid #E2E0DC;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #1A1A1A;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      border-color: #4A7C74;
+    }
+
+    .card:focus-visible {
+      outline: 2px solid #4A7C74;
+      outline-offset: 3px;
+    }
+
+    .card-flag {
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .card-lang {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #1A1A1A;
+    }
+
+    .card-sub {
+      font-size: 0.78rem;
+      color: #9B9895;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .card-arrow {
+      font-size: 0.85rem;
+      color: #4A7C74;
+      opacity: 0;
+      transform: translateX(-4px);
+      transition: opacity 0.18s ease, transform 0.18s ease;
+    }
+
+    .card:hover .card-arrow {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    @media (max-width: 360px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .card, .card-arrow {
+        transition: none;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>In which language </h1>
-	<h2>would you like to view Varshitha's Resume? </h2>
-        <a href="https://drive.google.com/file/d/1xLRPNTGH1rUCNMQuB8aLdviTRM6uMEVA/view?usp=sharing" class="button">English Resume</a>
-        <a href="https://drive.google.com/file/d/1dJi7VqqBehbroJa-FYVpJT29ZwBn9afl/view?usp=sharing" class="button">Lebenslauf auf Deutsch</a>
+  <div class="wrapper">
+    <h1 class="name">Varshitha Ramakumar</h1>
+    <div class="divider"></div>
+    <p class="prompt">Choose your preferred language to view the resume.</p>
+
+    <div class="cards">
+      <a href="https://drive.google.com/file/d/1Z_KT7UpgtttmQlBOXwae3_p1vmfppNaZ/view?usp=sharing"
+         class="card"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="View English Resume">
+        <span class="card-flag">🇬🇧</span>
+        <span class="card-lang">English</span>
+        <span class="card-sub">Resume</span>
+        <span class="card-arrow">→</span>
+      </a>
+
+      <a href="https://drive.google.com/file/d/1ZTpLD7BO5I6JDC4a8YHVRD65ErbG3lUS/view?usp=sharing"
+         class="card"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Lebenslauf auf Deutsch ansehen">
+        <span class="card-flag">🇩🇪</span>
+        <span class="card-lang">Deutsch</span>
+        <span class="card-sub">Lebenslauf</span>
+        <span class="card-arrow">→</span>
+      </a>
     </div>
+  </div>
 </body>
 </html>
